@@ -18,10 +18,12 @@ app.use(bodyParser.json());
 
 app.use('/api', routes);
 
+// eslint-disable-next-line no-unused-vars
 app.use((req, res, next) => {
   res.status(404).json({ message: 'Route not found' });
 });
 
+// eslint-disable-next-line no-unused-vars
 app.use((err, req, res, next) => {
   if (err instanceof ValidationError) {
     res.status(err.statusCode).json(err);
