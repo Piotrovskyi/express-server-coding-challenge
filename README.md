@@ -3,7 +3,7 @@
 ## Pre-requisites
 1. Install Docker and docker compose
 ```sh
-curl -fsSL get.docker.com -o get-docker.sh`
+curl -fsSL get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 ```
 2. Or you will need node:18 to run app locally
