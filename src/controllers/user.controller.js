@@ -18,7 +18,9 @@ exports.create = async (req, res, next) => {
 
 exports.getAll = async (req, res, next) => {
   try {
-    const { page = 1, limit = 20 } = req.query;
+    let { page = 1, limit = 20 } = req.query;
+    page = parseInt(page, 10);
+    limit = parseInt(limit, 10);
     const offset = (page - 1) * limit;
 
     const totalItems = await models.User.count();
