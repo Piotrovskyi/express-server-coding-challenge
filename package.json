@@ -2,7 +2,9 @@
   "scripts": {
     "start": "node ./src/index.js",
     "dev": "nodemon ./src/index.js",
-    "test": "NODE_ENV=test jest"
+    "test": "NODE_ENV=test jest",
+    "test:watch": "NODE_ENV=test jest --watch",
+    "lint": "eslint ."
   },
   "dependencies": {
     "body-parser": "^1.20.2",
