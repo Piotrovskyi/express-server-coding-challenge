@@ -46,15 +46,17 @@ exports.getById = async (req, res, next) => {
 
 exports.createArtComment = async (req, res, next) => {
   try {
-    const { artID } = req.params;
+    let { artID } = req.params;
     const { userID, name, content } = req.body;
+
+    artID = parseInt(artID, 10);
 
     // validate dependencies
     let user = null;
     if (userID) {
       user = await models.User.findByPk(userID);
       if (!user) {
-        res.status(404).json({ message: 'User not exist', data: null });
+        res.status(400).json({ message: 'User not exist', data: null });
         return;
       }
     } else {
@@ -67,7 +69,7 @@ exports.createArtComment = async (req, res, next) => {
 
     const art = await models.Art.findByPk(artID);
     if (!art) {
-      res.status(404).json({ message: 'Art not exist', data: null });
+      res.status(400).json({ message: 'Art not exist', data: null });
       return;
     }
 

@@ -11,6 +11,7 @@
     "rules": {
         "global-require": 0,
         "max-len": ["error", { "code": 100 }],
-        "import/no-unresolved": 0
+        "import/no-unresolved": 0,
+        "no-undef": 0
     }
 }
