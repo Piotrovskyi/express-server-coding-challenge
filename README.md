@@ -37,12 +37,12 @@ Startup script run migrations and seed automatically
 
 ## Testing
 The tests are written in Jest and supertest
-Automated tests are running in github actions
+Automated tests are running in `github actions`
 
 ### Running tests using NPM Scripts
 
 ```sh
-npm run test
+npm run test -- --coverage
 ```
 
 ## ESLint

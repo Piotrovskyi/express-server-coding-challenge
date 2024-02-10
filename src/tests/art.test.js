@@ -154,6 +154,29 @@ describe('Art API', () => {
     expect(response.body.data.userID).toBe(1);
   });
 
+  test(
+    'Should create comment successfully if non guest user create comment multiple times',
+    async () => {
+      await sequelize.models.Art.bulkCreate([
+        { title: 'Art 1', artist: 'Van Gog', year: 2021 },
+      ]);
+      await sequelize.models.User.bulkCreate([
+        { name: 'John', age: 18, location: 'Lagos, Nigeria' },
+      ]);
+      const response = await request(app).post('/api/art/1/comments').send({
+        userID: 1,
+        content: 'Great art',
+      });
+
+      expect(response.statusCode).toBe(201);
+      const response2 = await request(app).post('/api/art/1/comments').send({
+        userID: 1,
+        content: 'Great art 2',
+      });
+      expect(response2.statusCode).toBe(201);
+    },
+  );
+
   test('Should ignore custom name if userID passed', async () => {
     await sequelize.models.Art.bulkCreate([
       { title: 'Art 1', artist: 'Van Gog', year: 2021 },

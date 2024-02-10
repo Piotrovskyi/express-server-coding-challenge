@@ -12,9 +12,7 @@ modelCreators.forEach((modelCreator) => {
 });
 
 Object.keys(sequelize.models).forEach((model) => {
-  if (sequelize.models[model].associate) {
-    sequelize.models[model].associate(sequelize.models);
-  }
+  sequelize.models[model].associate(sequelize.models);
 });
 
 module.exports = sequelize.models;
