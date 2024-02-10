@@ -29,7 +29,7 @@ Startup script run migrations and seed automatically
 |NODE_ENV|node env variable|"development"|
 |PORT|web server port|3000|
 |DATABASE_TYPE|database type|"postgres"|
-|DATABASE_HOST|db host|"postgres"|
+|DATABASE_HOST|db host|"localhost"|
 |DATABASE_PORT|db port|5432|
 |DATABASE_USERNAME|db username|username|
 |DATABASE_PASSWORD|db password|password|
