@@ -5,6 +5,7 @@ const dotenv = require('dotenv-safe');
 dotenv.config({
   path: path.join(__dirname, '../../.env'),
   example: path.join(__dirname, '../../.env.example'),
+  allowEmptyValues: true,
 });
 
 module.exports = {

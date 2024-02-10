@@ -4,3 +4,4 @@ source_data
 *.log
 .vscode
 .env
+coverage
