@@ -1,0 +1,6 @@
+node_modules
+.db
+source_data
+*.log
+.vscode
+.env
