@@ -18,10 +18,10 @@ Startup script run migrations and seed automatically
 ## Fast start local
 1. Copy `.env.example` to `.env`
 2. You will need locally installed Postgres database v14 (https://www.postgresql.org/docs/14/tutorial-install.html)
-3. npm install
-4. npm run sequelize -- db:migrate
-5. npm run sequelize -- db:seed:all
-6. npm run start
+3. `npm install`
+4. `npm run sequelize -- db:migrate`
+5. `npm run sequelize -- db:seed:all`
+6. `npm run start`
 
 ## Environment vars
 | Name| Description| Default Value|
