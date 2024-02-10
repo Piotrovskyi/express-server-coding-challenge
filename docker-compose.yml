@@ -4,6 +4,8 @@ services:
     build: .
     ports:
       - "${PORT}:${PORT}"
+    environment:
+      - DATABASE_HOST=postgres # override
     command:
       [
         "bash",
@@ -20,8 +22,8 @@ services:
 
   postgres:
     image: postgres:14.2
-    ports:
-      - ${DATABASE_PORT}:5432
+    # ports:
+    #   - ${DATABASE_PORT}:5432
     volumes:
       - ./.db:/var/lib/postgresql/data
     environment:

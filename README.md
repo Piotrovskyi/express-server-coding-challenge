@@ -8,7 +8,7 @@ sudo sh get-docker.sh
 ```
 2. Or you will need node:18 to run app locally
 
-## Fast start with docker
+## Fast start with docker (recommended)
 1. Copy `.env.example` to `.env`
 2. Run `docker compose up -d`
 3. App will be up and running on port 3000
