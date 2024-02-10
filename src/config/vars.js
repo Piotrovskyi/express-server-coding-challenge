@@ -1,5 +1,5 @@
 const path = require('path');
-const dotenv = require('dotenv-safe');
+const dotenv = require('dotenv');
 
 // import .env variables
 dotenv.config({
